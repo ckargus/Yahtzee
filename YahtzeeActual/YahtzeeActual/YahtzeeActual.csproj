@@ -46,7 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Check.cs" />
+=======
+    <Compile Include="Dice.cs" />
+>>>>>>> 92420867b57f718cac0c8b1bf721119ed4ffbb74
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
