@@ -16,5 +16,16 @@ namespace YahtzeeActual
         {
             InitializeComponent();
         }
+
+        private void Dice1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RollButton_Click(object sender, EventArgs e)
+        {
+            Dice temp = new Dice();
+            temp.roll(Dice1, DiceHold1);
+        }
     }
 }
