@@ -9,16 +9,17 @@ namespace YahtzeeActual
 {
     public class Dice
     {
+        private Random rand = new Random();
         public Dice()
         {
         }
 
-        public void roll(TextBox text, CheckBox check)
+        public void roll(Label text, CheckBox check)
         {
             if (check.Checked == false)
             {
-                Random rand = new Random();
-                text.Text =  rand.Next().ToString();
+                
+                text.Text =  (rand.Next() % 6 + 1).ToString();
             }
 
         }

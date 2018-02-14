@@ -13,6 +13,10 @@ namespace YahtzeeActual
         public void CountElements(List<int> list)
         {
             elementCount = new List<int>();
+            for(int i = 0; i < 6; i++)
+            {
+                elementCount.Add(0);
+            }
             foreach (int x in list)
             {
                 if (x == 1)

@@ -380,6 +380,7 @@
             this.OnesButton.TabIndex = 51;
             this.OnesButton.Text = "Ones";
             this.OnesButton.UseVisualStyleBackColor = true;
+            this.OnesButton.Click += new System.EventHandler(this.OnesButton_Click);
             // 
             // TwosButton
             // 
@@ -389,6 +390,7 @@
             this.TwosButton.TabIndex = 52;
             this.TwosButton.Text = "Twos";
             this.TwosButton.UseVisualStyleBackColor = true;
+            this.TwosButton.Click += new System.EventHandler(this.TwosButton_Click);
             // 
             // ThreesButton
             // 
@@ -398,6 +400,7 @@
             this.ThreesButton.TabIndex = 53;
             this.ThreesButton.Text = "Threes";
             this.ThreesButton.UseVisualStyleBackColor = true;
+            this.ThreesButton.Click += new System.EventHandler(this.ThreesButton_Click);
             // 
             // FoursButton
             // 
@@ -407,6 +410,7 @@
             this.FoursButton.TabIndex = 54;
             this.FoursButton.Text = "Fours";
             this.FoursButton.UseVisualStyleBackColor = true;
+            this.FoursButton.Click += new System.EventHandler(this.FoursButton_Click);
             // 
             // FivesButton
             // 
@@ -416,6 +420,7 @@
             this.FivesButton.TabIndex = 55;
             this.FivesButton.Text = "Fives";
             this.FivesButton.UseVisualStyleBackColor = true;
+            this.FivesButton.Click += new System.EventHandler(this.FivesButton_Click);
             // 
             // SixesButton
             // 
@@ -425,6 +430,7 @@
             this.SixesButton.TabIndex = 56;
             this.SixesButton.Text = "Sixes";
             this.SixesButton.UseVisualStyleBackColor = true;
+            this.SixesButton.Click += new System.EventHandler(this.SixesButton_Click);
             // 
             // TOKButton
             // 
@@ -434,6 +440,7 @@
             this.TOKButton.TabIndex = 57;
             this.TOKButton.Text = "Three Of A Kind";
             this.TOKButton.UseVisualStyleBackColor = true;
+            this.TOKButton.Click += new System.EventHandler(this.TOKButton_Click);
             // 
             // BonusLabel
             // 
@@ -452,6 +459,7 @@
             this.FOKButton.TabIndex = 59;
             this.FOKButton.Text = "Four Of A Kind";
             this.FOKButton.UseVisualStyleBackColor = true;
+            this.FOKButton.Click += new System.EventHandler(this.FOKButton_Click);
             // 
             // FullButton
             // 
@@ -461,6 +469,7 @@
             this.FullButton.TabIndex = 60;
             this.FullButton.Text = "Full House";
             this.FullButton.UseVisualStyleBackColor = true;
+            this.FullButton.Click += new System.EventHandler(this.FullButton_Click);
             // 
             // SmallButton
             // 
@@ -470,6 +479,7 @@
             this.SmallButton.TabIndex = 61;
             this.SmallButton.Text = "Small Straight";
             this.SmallButton.UseVisualStyleBackColor = true;
+            this.SmallButton.Click += new System.EventHandler(this.SmallButton_Click);
             // 
             // LargeButton
             // 
@@ -479,6 +489,7 @@
             this.LargeButton.TabIndex = 62;
             this.LargeButton.Text = "Large Straight";
             this.LargeButton.UseVisualStyleBackColor = true;
+            this.LargeButton.Click += new System.EventHandler(this.LargeButton_Click);
             // 
             // ChanceButton
             // 
@@ -488,6 +499,7 @@
             this.ChanceButton.TabIndex = 63;
             this.ChanceButton.Text = "Chance";
             this.ChanceButton.UseVisualStyleBackColor = true;
+            this.ChanceButton.Click += new System.EventHandler(this.ChanceButton_Click);
             // 
             // YahtzeeButton
             // 
@@ -497,6 +509,7 @@
             this.YahtzeeButton.TabIndex = 64;
             this.YahtzeeButton.Text = "YAHTZEE";
             this.YahtzeeButton.UseVisualStyleBackColor = true;
+            this.YahtzeeButton.Click += new System.EventHandler(this.YahtzeeButton_Click);
             // 
             // Total
             // 
