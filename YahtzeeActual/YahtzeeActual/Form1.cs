@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace YahtzeeActual
 {
     public partial class Form1 : Form
@@ -16,6 +15,7 @@ namespace YahtzeeActual
         int IntTotal = 0;
         int IntSum = 0;
         int IntBonus = 35;
+        int totalClicks = 0;
 
         public Form1()
         {
@@ -26,7 +26,17 @@ namespace YahtzeeActual
         {
 
         }
-
+        private void Reset()
+        {
+            RollButton.Enabled = true;
+            DiceHold1.Checked = false;
+            DiceHold2.Checked = false;
+            DiceHold3.Checked = false;
+            DiceHold4.Checked = false;
+            DiceHold5.Checked = false;
+            RollButton.PerformClick();
+            totalClicks = 1;
+        }
         private void RollButton_Click(object sender, EventArgs e)
         {
             Dice temp = new Dice();
@@ -60,7 +70,11 @@ namespace YahtzeeActual
             if (SmallButton.Enabled == true) { checker.SmallStright(Small); }
             if (YahtzeeButton.Enabled == true) { checker.Yathzee(Yahtzee); }
             if (ChanceButton.Enabled == true) { checker.Chance(DiceList, Chance); }
-
+            totalClicks++;
+            if(totalClicks == 3)
+            {
+                RollButton.Enabled = false;
+            }
 
         }
 
@@ -77,6 +91,7 @@ namespace YahtzeeActual
                 Bonus.Text = IntBonus.ToString();
                 IntTotal += IntBonus;
             }
+            Reset();
         }
 
         private void TwosButton_Click(object sender, EventArgs e)
@@ -92,6 +107,7 @@ namespace YahtzeeActual
                 Bonus.Text = IntBonus.ToString();
                 IntTotal += IntBonus;
             }
+            Reset();
         }
 
         private void ThreesButton_Click(object sender, EventArgs e)
@@ -107,6 +123,7 @@ namespace YahtzeeActual
                 Bonus.Text = IntBonus.ToString();
                 IntTotal += IntBonus;
             }
+            Reset();
         }
 
         private void FoursButton_Click(object sender, EventArgs e)
@@ -121,7 +138,7 @@ namespace YahtzeeActual
                 Bonus.Text = IntBonus.ToString();
                 IntTotal += IntBonus;
             }
-
+            Reset();
         }
 
         private void FivesButton_Click(object sender, EventArgs e)
@@ -131,12 +148,12 @@ namespace YahtzeeActual
             Total.Text = IntTotal.ToString();
             IntSum += Int32.Parse(Fives.Text);
             Sum.Text = IntSum.ToString();
-
             if (IntSum > 63)
             {
                 Bonus.Text = IntBonus.ToString();
                 IntTotal += IntBonus;
             }
+            Reset();
         }
 
         private void SixesButton_Click(object sender, EventArgs e)
@@ -152,8 +169,7 @@ namespace YahtzeeActual
                 Bonus.Text = IntBonus.ToString();
                 IntTotal += IntBonus;
             }
-
-
+            Reset();
         }
 
         private void TOKButton_Click(object sender, EventArgs e)
@@ -161,6 +177,7 @@ namespace YahtzeeActual
             TOKButton.Enabled = false;
             IntTotal += Int32.Parse(TOK.Text);
             Total.Text = IntTotal.ToString();
+            Reset();
         }
 
         private void FOKButton_Click(object sender, EventArgs e)
@@ -168,6 +185,7 @@ namespace YahtzeeActual
             FOKButton.Enabled = false;
             IntTotal += Int32.Parse(FOK.Text);
             Total.Text = IntTotal.ToString();
+            Reset();
         }
 
         private void FullButton_Click(object sender, EventArgs e)
@@ -175,6 +193,7 @@ namespace YahtzeeActual
             FullButton.Enabled = false;
             IntTotal += Int32.Parse(Full.Text);
             Total.Text = IntTotal.ToString();
+            Reset();
         }
 
         private void SmallButton_Click(object sender, EventArgs e)
@@ -182,6 +201,7 @@ namespace YahtzeeActual
             SmallButton.Enabled = false;
             IntTotal += Int32.Parse(Small.Text);
             Total.Text = IntTotal.ToString();
+            Reset();
         }
 
         private void LargeButton_Click(object sender, EventArgs e)
@@ -189,6 +209,7 @@ namespace YahtzeeActual
             LargeButton.Enabled = false;
             IntTotal += Int32.Parse(Large.Text);
             Total.Text = IntTotal.ToString();
+            Reset();
         }
 
         private void ChanceButton_Click(object sender, EventArgs e)
@@ -196,6 +217,7 @@ namespace YahtzeeActual
             ChanceButton.Enabled = false;
             IntTotal += Int32.Parse(Chance.Text);
             Total.Text = IntTotal.ToString();
+            Reset();
         }
 
         private void YahtzeeButton_Click(object sender, EventArgs e)
@@ -203,6 +225,7 @@ namespace YahtzeeActual
             YahtzeeButton.Enabled = false;
             IntTotal += Int32.Parse(Yahtzee.Text);
             Total.Text = IntTotal.ToString();
+            Reset();
         }
     }
 }
