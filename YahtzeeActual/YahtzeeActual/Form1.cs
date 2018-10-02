@@ -123,6 +123,8 @@ namespace YahtzeeActual
                 Bonus.Text = IntBonus.ToString();
                 IntTotal += IntBonus;
             }
+            List<object> test = new List<object>();
+            test.Add(1);
             Reset();
         }
 
